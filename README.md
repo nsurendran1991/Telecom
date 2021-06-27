@@ -21,6 +21,9 @@ Steps to Run:
 4. Connect to the rest end points by post man or soap UI
   
   http://localhost:4000/phoneNumbers
+     
   Edpoints:
+     
   /customer/{customerName}
+     
   customer/{customerName}/phoneNumbers
