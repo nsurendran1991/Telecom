@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.belong.telecom.service.PhoneNumberServiceImplTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.66 s - in com.belong.telecom.service.PhoneNumberServiceImplTests

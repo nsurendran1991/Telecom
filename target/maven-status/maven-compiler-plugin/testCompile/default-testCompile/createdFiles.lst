@@ -1,0 +1,7 @@
+com/belong/telecom/TelecomApplicationTests.class
+com/belong/telecom/controller/PhoneNumberControllerTests.class
+com/belong/telecom/repository/CustomerRepositoryTests.class
+com/belong/telecom/repository/PhoneNumberRepositoryTests.class
+com/belong/telecom/service/PhoneNumberServiceImplTests.class
+com/belong/telecom/controller/CustomerControllerTests.class
+com/belong/telecom/service/CustomerServiceImplTests.class
