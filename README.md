@@ -16,7 +16,7 @@ Steps to Run:
   docker build -f src/main/resources/Dockerfile -t [tag-name] .    
   
 3. Run the container using below command
-  docker run -t [tag-name]
+  docker run -p 4000:4000 [tag-name]
   
 4. Connect to the rest end points by post man or soap UI
   
