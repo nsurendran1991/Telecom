@@ -13,10 +13,10 @@ Steps to Run:
      git clone https://github.com/nsurendran1991/Telecom.git
 
 2. Go to Telecom folder and execute build the docker container 
-  docker build -f src/main/resources/Dockerfile -t <tag-name> .    
+  docker build -f src/main/resources/Dockerfile -t [tag-name] .    
   
 3. Run the container using below command
-  docker run -t <tag-name>
+  docker run -t [tag-name]
   
 4. Connect to the rest end points by post man or soap UI
   
