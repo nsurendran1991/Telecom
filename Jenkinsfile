@@ -28,9 +28,13 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '', registryCredential ) {
+          
+          withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
+    dockerImage.push()
+}
+         /* docker.withRegistry( '', registryCredential ) {
             dockerImage.push()
-          }
+          }*/
         }
          /*withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub',
         usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
