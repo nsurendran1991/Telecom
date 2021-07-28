@@ -25,11 +25,16 @@ pipeline {
     }
     stage('Deploy Image') {
       steps{
-        script {
+        /*script {
           docker.withRegistry( 'https://hub.docker.com/repository/docker', registryCredential ) {
             dockerImage.push()
           }
-        }
+        }*/
+         withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub',
+        usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+      sh 'docker login -u "$USERNAME" -p "$PASSWORD"'
+      dockerImage.push()
+    }
       }
     }
     /*stage('Remove Unused docker image') {
