@@ -33,8 +33,9 @@ pipeline {
          withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerhub',
         usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
       sh 'docker login -u "$USERNAME" -p "$PASSWORD"'
-      sh 'dockerImage.push()'
+      
     }
+        sh 'docker push dockerImage'
       }
     }
     /*stage('Remove Unused docker image') {
