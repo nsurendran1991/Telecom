@@ -4,7 +4,9 @@ pipeline {
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
-  agent any
+  agent {
+    dockerfile true
+  }
   tools {
         maven 'maven'
         dockerTool 'docker'
