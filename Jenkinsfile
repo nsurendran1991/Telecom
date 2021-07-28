@@ -35,7 +35,7 @@ pipeline {
       sh 'docker login -u "$USERNAME" -p "$PASSWORD"'
       
     }
-        sh 'docker push dockerImage'
+        sh 'docker push $dockerImage'
       }
     }
     /*stage('Remove Unused docker image') {
