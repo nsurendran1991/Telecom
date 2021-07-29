@@ -22,13 +22,14 @@ pipeline {
                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
             }
-        }
-        post {
-            always {
-                junit '**/target/surefire-reports/TEST-*.xml'
-                jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
+            post {
+                always {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    jiraSendBuildInfo site: 'nsurendran1991.atlassian.net'
+                }
             }
         }
+        
         stage('Deploy Image') {
             steps{
                 script {          
