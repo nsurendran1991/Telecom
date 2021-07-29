@@ -10,11 +10,7 @@ pipeline {
         dockerTool 'docker'       
     }
     stages {
-        stage('Cloning Git') {
-            steps {
-                git 'https://github.com/nsurendran1991/Telecom.git'
-            }
-        }
+        
         stage('Building image') {
             steps{
                 sh 'mvn clean install'
