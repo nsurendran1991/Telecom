@@ -23,8 +23,7 @@ pipeline {
          }
           sh 'docker pull registry'
          
-        }
-        
+        }        
         
       }
       post {
