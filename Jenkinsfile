@@ -20,7 +20,7 @@ pipeline {
           
           withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
     
-}
+         }
           sh 'docker pull registry'
          
         }
