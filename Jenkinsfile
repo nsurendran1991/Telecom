@@ -14,6 +14,7 @@ pipeline {
         stage('Building image') {
             steps{
                 sh 'mvn clean install'
+                junit '**/target/surefire-reports/TEST-*.xml'
                 script {
                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
                 }
