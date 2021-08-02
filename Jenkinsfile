@@ -6,23 +6,17 @@ pipeline {
   }
   agent any
   tools {
-        maven 'maven'
-        dockerTool 'docker'
-       
-    }
-  stages {
-    
+      maven 'maven'
+      dockerTool 'docker'       
+  }
+  stages {    
     stage('Pull Docker Image') {
       steps{
-        script {
-          
-          withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
-    
+        script {          
+          withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {    
          }
-          sh 'docker pull registry'
-         
+          sh 'docker pull registry'         
         }        
-        
       }
       post {
         always {
