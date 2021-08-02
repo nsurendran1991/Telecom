@@ -13,7 +13,7 @@ pipeline {
         stage('Pull Docker Image') {
             steps{
                 script {          
-                    withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {    
+                    withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {   
                     }
                     sh 'docker pull registry'         
                 }
